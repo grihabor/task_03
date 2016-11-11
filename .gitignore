@@ -3,3 +3,5 @@ obj
 Utility/obj
 Simple OpenGL Image Library/lib
 Simple OpenGL Image Library/obj
+.idea/
+CMakeLists.txt
