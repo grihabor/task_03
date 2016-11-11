@@ -1,3 +1,4 @@
+#define GL_CONTEXT_LOST 0x0507
 #include "GL.h"
 
 namespace GL {
