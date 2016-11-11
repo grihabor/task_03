@@ -20,3 +20,6 @@ To clean the project:
 ```
 make clean
 ```
+## Key hacks
+[#define GL_CONTEXT_LOST 0x0507](https://github.com/grihabor/task_03/commit/7be0889be71614f861087246417cb86e90c3f4b2)  
+[MESA_GL_VERSION_OVERRIDE=3.3COMPAT](https://github.com/grihabor/task_03/commit/7649a49026f82039be95898c165f5635f840b81e)  
