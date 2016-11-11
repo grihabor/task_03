@@ -44,6 +44,8 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 clean:
 	$(DELETER) $(OBJ) $(BIN)
+	rm -rf obj
+	rm -rf lib
 
 install: $(BIN)
 	@echo Installing to: $(LOCAL)/lib and $(LOCAL)/include...

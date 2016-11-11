@@ -58,6 +58,7 @@ clean_release:
 	rm -f $(OBJ_RELEASE) $(OUT_RELEASE)
 	rm -rf bin
 	rm -rf $(OBJDIR_RELEASE)
+	rm -rf obj
 
 .PHONY: before_release after_release clean_release
 
