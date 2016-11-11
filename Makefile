@@ -28,7 +28,7 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/main.o
 
 all: 
 	cd Utility; make all
-	cd 'Simple OpenGL Image Library'; make all
+	cd 'Simple OpenGL Image Library'; make all; make install
 	make release
 
 clean: 
