@@ -7,7 +7,7 @@ cd task_03
 ```
 To build the project:
 ```
-make all
+sudo make all
 ```
 To run the project:
 ```
