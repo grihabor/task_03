@@ -28,9 +28,9 @@ OBJ_RELEASE = $(OBJDIR_RELEASE)/main.o
 
 all: 
 	cd Utility; make all
-	cd 'Simple OpenGL Image Library'; make all; make install
+	cd 'Simple OpenGL Image Library'; make all
 	make release
-
+	
 clean: 
 	cd Utility; make clean
 	cd 'Simple OpenGL Image Library'; make clean
@@ -45,7 +45,9 @@ before_release:
 	test -d $(OBJDIR_RELEASE) || mkdir -p $(OBJDIR_RELEASE)
 
 after_release: 
-
+	chmod -R 777 bin
+	chmod -R 777 obj
+	
 release: before_release out_release after_release
 
 out_release: before_release $(OBJ_RELEASE) $(DEP_RELEASE)

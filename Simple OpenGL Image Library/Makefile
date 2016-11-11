@@ -26,7 +26,7 @@ SRCNAMES = \
 OBJ = $(addprefix $(OBJDIR)/, $(notdir $(SRCNAMES:.c=.o)))
 BIN = $(LIBDIR)/$(LIB)
 
-all: directories $(BIN)
+all: directories $(BIN) post_install
 
 directories:
 	mkdir -p obj
@@ -47,13 +47,17 @@ clean:
 	rm -rf obj
 	rm -rf lib
 
-install: $(BIN)
+install: $(BIN) post_install
 	@echo Installing to: $(LOCAL)/lib and $(LOCAL)/include...
 	@echo -------------------------------------------------------------------
 	$(COPIER) $(BIN) $(LOCAL)/lib
 	$(COPIER) $(INCDIR)/$(INC) $(LOCAL)/include
 	@echo -------------------------------------------------------------------
 	@echo SOIL library installed. Enjoy!
+
+post_install:
+	chmod -R 777 $(OBJDIR)
+	chmod -R 777 $(LIBDIR)
 
 uninstall:
 	$(DELETER) $(LOCAL)/include/$(INC) $(LOCAL)/lib/$(LIB)
