@@ -37,7 +37,7 @@ clean:
 	make clean_release
 	
 run:
-	cp -r Texture/shaders bin/shaders
+	cp -r shaders bin/shaders
 	cd bin; ./Instancing
 
 before_release: 
