@@ -29,5 +29,10 @@ set(SOURCE_FILES
 add_executable(task_03 ${SOURCE_FILES})
 target_link_libraries(task_03 libGL.so libglut.so libGLEW.so libGLU.so)
 
+add_custom_target(textures ${CMAKE_COMMAND} -E copy_directory
+        ${CMAKE_SOURCE_DIR}/Texture $<TARGET_FILE_DIR:task_03>/Texture)
+      
 add_custom_target(shaders ${CMAKE_COMMAND} -E copy_directory
         ${CMAKE_SOURCE_DIR}/shaders $<TARGET_FILE_DIR:task_03>/shaders)
+
+add_custom_target(program DEPENDS shaders textures)
