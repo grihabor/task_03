@@ -1,6 +1,7 @@
 # task_03
 
 ## How to use
+### Using make
 ```
 sudo apt install freeglut3-dev libglew-dev libglu1-mesa-dev  
 git clone https://github.com/grihabor/task_03
@@ -18,9 +19,12 @@ To clean the project:
 ```
 make clean
 ```
-## Using CLion
+### Using cmake
+Choose the __task_03__ directory as source, generate makefile and run ```make```.
+
+### Using CLion
 To use with CLion you just need to open the project, choose __program__ as target and __task_03__ as executable. That's it!  
-shaders/ and Texture/ folders are automatically copied to the target directory.
+*shaders* and *Texture* folders are automatically copied to the target directory.
 
 ## Key hacks
 [#define GL_CONTEXT_LOST 0x0507](https://github.com/grihabor/task_03/commit/7be0889be71614f861087246417cb86e90c3f4b2)  
