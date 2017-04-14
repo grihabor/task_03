@@ -27,8 +27,8 @@ To use with CLion you just need to open the project, choose __program__ as targe
 *shaders* and *Texture* folders are automatically copied to the target directory.
 
 ### Branches
-Clone ```master``` to get project template  
-Clone ```bitbucket_branch``` to get completed project  
+Clone branch ```master``` to get project template  
+Clone branch ```bitbucket``` to get completed project  
 
 ## Key hacks
 [#define GL_CONTEXT_LOST 0x0507](https://github.com/grihabor/task_03/commit/7be0889be71614f861087246417cb86e90c3f4b2)  
